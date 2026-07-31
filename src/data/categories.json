@@ -4,7 +4,7 @@
     "name": "Sofas & Seating",
     "slug": "sofas",
     "description": "Deep, tailored seating built on hardwood frames and wrapped in performance weave.",
-    "image": "/images/categories/sofas.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/CLD6T4J9VZ.jpg",
     "featured": true,
     "count": 4
   },
@@ -13,7 +13,7 @@
     "name": "Chairs",
     "slug": "chairs",
     "description": "Accent, dining and lounge chairs with sculpted silhouettes.",
-    "image": "/images/categories/chairs.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/904EAD50B0.jpg",
     "featured": true,
     "count": 4
   },
@@ -22,7 +22,7 @@
     "name": "Tables",
     "slug": "tables",
     "description": "Dining, coffee and console tables in solid oak, walnut and travertine.",
-    "image": "/images/categories/tables.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/3J13XAT5LM.jpg",
     "featured": true,
     "count": 4
   },
@@ -31,7 +31,7 @@
     "name": "Beds & Bedroom",
     "slug": "beds",
     "description": "Upholstered bed frames, nightstands and dressers for a calm bedroom.",
-    "image": "/images/categories/beds.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/12B5400E80.jpg",
     "featured": true,
     "count": 3
   },
@@ -40,7 +40,7 @@
     "name": "Lighting",
     "slug": "lighting",
     "description": "Brass pendants, floor lamps and table lighting with a warm glow.",
-    "image": "/images/categories/lighting.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/WVKCUPH3RC.jpg",
     "featured": true,
     "count": 3
   },
@@ -49,7 +49,7 @@
     "name": "Storage",
     "slug": "storage",
     "description": "Sideboards, shelving and wardrobes that hide the clutter beautifully.",
-    "image": "/images/categories/storage.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/TMWN577QQF.jpg",
     "featured": true,
     "count": 4
   },
@@ -58,7 +58,7 @@
     "name": "Decor & Accents",
     "slug": "decor",
     "description": "Rugs, mirrors, vases and the finishing details that pull a room together.",
-    "image": "/images/categories/decor.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/QUU0AQABSN.jpg",
     "featured": false,
     "count": 4
   },
@@ -67,7 +67,7 @@
     "name": "Outdoor",
     "slug": "outdoor",
     "description": "All-weather lounge and dining pieces for balconies and courtyards.",
-    "image": "/images/categories/outdoor.svg",
+    "image": "https://cdn.stocksnap.io/img-thumbs/960w/6CA109EECC.jpg",
     "featured": false,
     "count": 2
   }

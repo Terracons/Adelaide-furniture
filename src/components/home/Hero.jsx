@@ -10,7 +10,7 @@ const SLIDES = [
     eyebrow: 'New season, 2026',
     title: 'Furniture built to outlast the trend',
     copy: 'Solid timber frames, natural fabrics and joinery cut by hand in our Adelaide workshop. Made once, properly.',
-    image: '/images/hero/living.svg',
+    image: 'https://cdn.stocksnap.io/img-thumbs/960w/HIH67XC5G0.jpg',
     cta: { label: 'Shop the collection', href: '/shop/' },
     alt: { label: 'Our story', href: '/about/' }
   },
@@ -18,7 +18,7 @@ const SLIDES = [
     eyebrow: 'Bedroom',
     title: 'A quieter room starts with the bed',
     copy: 'Upholstered frames with headboards tall enough to read against, on slatted hardwood bases that never creak.',
-    image: '/images/hero/bedroom.svg',
+    image: 'https://cdn.stocksnap.io/img-thumbs/960w/EGXWIV409M.jpg',
     cta: { label: 'Shop bedroom', href: '/category/beds/' },
     alt: { label: 'View lighting', href: '/category/lighting/' }
   },
@@ -26,7 +26,7 @@ const SLIDES = [
     eyebrow: 'Dining',
     title: 'Tables for the long lunches',
     copy: 'European oak, brass inlay, and enough room for everyone who turns up unannounced.',
-    image: '/images/hero/dining.svg',
+    image: 'https://cdn.stocksnap.io/img-thumbs/960w/VMJ6JJFFWR.jpg',
     cta: { label: 'Shop dining', href: '/category/tables/' },
     alt: { label: 'See chairs', href: '/category/chairs/' }
   }
