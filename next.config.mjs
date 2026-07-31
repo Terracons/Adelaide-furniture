@@ -1,25 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static HTML export -> everything lands in ./out and can be uploaded to
-  // public_html on Hostinger (or any shared host). No Node process required.
-  output: 'export',
-
-  // Apache serves /shop/ as /shop/index.html, so trailing slashes keep links working.
-  trailingSlash: true,
-
+  // Server runtime (Vercel serverless functions). We no longer export static
+  // HTML: pages render on demand and read from Neon Postgres through the API
+  // routes in src/app/api/*. See MIGRATE-TO-SERVER.md (Route D).
   reactStrictMode: true,
   poweredByHeader: false,
 
   images: {
-    // Next's image optimiser needs a server; static export must opt out.
+    // The <Img> component uses a plain <img>, so Vercel Blob URLs and local
+    // SVGs both work without remotePatterns config.
     unoptimized: true
   },
 
-  eslint: { ignoreDuringBuilds: true },
-
-  // If you deploy into a SUBFOLDER (e.g. yoursite.com/store), uncomment both:
-  // basePath: '/store',
-  // assetPrefix: '/store/',
+  eslint: { ignoreDuringBuilds: true }
 };
 
 export default nextConfig;
