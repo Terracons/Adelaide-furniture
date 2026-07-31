@@ -29,6 +29,9 @@ const { items, total } = await getProducts({ category: 'sofas', page: 2 });
 Option A keeps you on the hosting you already pay for. Option C is fastest. Option B is the
 nicest codebase.
 
+> **Route D — Vercel + Neon + Vercel Blob is implemented on the `feat/neon-backend` branch.**
+> See the runbook at the end of this file. It's Route B done serverless: no VPS to manage.
+
 ---
 
 ## Route A — PHP API on Hostinger shared hosting
@@ -351,3 +354,57 @@ The site still deploys to Hostinger as static files. Supabase handles the data.
 | Testing | 2 hrs |
 
 Call it one focused day, two at a comfortable pace.
+
+---
+
+## Route D — Vercel + Neon + Vercel Blob (implemented on `feat/neon-backend`)
+
+This branch already contains the full migration. It swaps the static export for a Next.js
+server app: pages render on demand and read live data from Neon Postgres through the API
+routes in `src/app/api/*`. Passwords are bcrypt-hashed, sessions are signed cookies (jose),
+`/admin` is guarded by `middleware.js`, and admin image uploads go to Vercel Blob.
+
+### What changed
+
+| Area | Files |
+|---|---|
+| Config | `next.config.mjs` (no more `output: 'export'`), `.env.example` |
+| Database | `src/lib/db.js` (Neon client + generic `{ id, data }` collections), `scripts/schema.sql`, `scripts/seed.mjs` |
+| Server logic | `src/lib/queries.js` (all business logic, DB-backed), `src/app/api/**` (route handlers) |
+| Auth | `src/lib/auth.js`, `src/middleware.js`, `/api/auth/*`, `/api/account` |
+| Data layer | `src/lib/data.js` — now thin `fetch` wrappers; **every signature unchanged** |
+| Uploads | `/api/upload` + an Upload button in the product form |
+
+The storefront, admin screens, cart/wishlist, and design system are untouched.
+
+### Run it locally
+
+1. Create a database at [neon.tech] (or via Vercel's Neon integration) and copy the **pooled**
+   connection string.
+2. `cp .env.example .env.local` and fill in `DATABASE_URL`, a long random `SESSION_SECRET`,
+   and (optionally) `BLOB_READ_WRITE_TOKEN`.
+3. `npm install`
+4. `npm run seed`  — creates the tables and loads `src/data/*.json` (hashing passwords).
+5. `npm run dev`
+
+Admin login uses the credentials from `src/data/settings.json`
+(`admin@adelaidefurniture.com.au` / `adelaide2026`) — **change these before going live.**
+Seeded customer accounts all use the password `demo1234`.
+
+### Deploy to Vercel
+
+1. Import the repo; framework auto-detects as **Next.js** (no static-export settings).
+2. Add a Neon integration (or set `DATABASE_URL`) and create a **Blob store** (adds
+   `BLOB_READ_WRITE_TOKEN`). Set `SESSION_SECRET` and `NEXT_PUBLIC_SITE_URL`.
+3. Deploy, then run the seed once against the production database
+   (`DATABASE_URL=... npm run seed` locally, or from a one-off job).
+
+### Notes & next steps
+
+- **Data model:** each collection is one table of `(id, data jsonb)` — fast to migrate, keeps
+  the JSON shapes identical. Split hot fields into real columns if a table grows large.
+- **Order lookup** (`GET /api/orders/[id]`) is public so the confirmation page works for guest
+  checkout; tighten to an owner check if you require it.
+- **Payments** are still a mock — wire Stripe/Square before taking real money.
+- `id`s are assigned with `MAX(id)+1`; fine at this scale, switch to an identity/sequence if
+  you expect concurrent writes.
