@@ -70,6 +70,11 @@ export function subscribe(fn) {
   return () => listeners.delete(fn);
 }
 
+/** Nudge every subscriber — used after a server mutation so useData refreshes. */
+export function touch() {
+  emit('*');
+}
+
 /** Next auto-increment id for a collection. */
 export function nextId(rows) {
   return rows.reduce((max, r) => Math.max(max, Number(r.id) || 0), 0) + 1;

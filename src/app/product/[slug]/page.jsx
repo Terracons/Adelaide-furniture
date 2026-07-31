@@ -4,12 +4,10 @@ import Gallery from '@/components/product/Gallery';
 import ProductPanel from '@/components/product/ProductPanel';
 import Reviews from '@/components/product/Reviews';
 import RelatedProducts from '@/components/product/RelatedProducts';
-import { getAllProducts, getProduct, getRelatedProducts, getReviews } from '@/lib/data';
+import { getProduct, getRelatedProducts, getReviews } from '@/lib/data';
 
-export async function generateStaticParams() {
-  const products = await getAllProducts();
-  return products.map((p) => ({ slug: p.slug }));
-}
+// Rendered on demand from Neon (no build-time static generation).
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
   const product = await getProduct(params.slug);

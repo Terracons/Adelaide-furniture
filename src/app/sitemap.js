@@ -1,5 +1,7 @@
 import { getAllProducts, getCategories, getPosts } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://adelaidefurniture.com.au';
 
 export default async function sitemap() {

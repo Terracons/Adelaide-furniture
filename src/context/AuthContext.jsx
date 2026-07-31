@@ -2,7 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { read, write, remove } from '@/lib/store';
-import { loginCustomer, registerCustomer, adminLogin, saveCustomer } from '@/lib/data';
+import { loginCustomer, registerCustomer, adminLogin, logout as apiLogout, updateProfile as apiUpdateProfile } from '@/lib/data';
 
 const AuthContext = createContext(null);
 
@@ -42,8 +42,8 @@ export function AuthProvider({ children }) {
   const updateProfile = useCallback(
     async (patch) => {
       if (!user) return { ok: false };
-      const next = { ...user, ...patch };
-      await saveCustomer(next);
+      const res = await apiUpdateProfile(patch);
+      const next = res?.user ? { ...user, ...res.user } : { ...user, ...patch };
       setUser(next);
       write('session', next);
       return { ok: true };
@@ -51,7 +51,8 @@ export function AuthProvider({ children }) {
     [user]
   );
 
-  const logout = useCallback(() => {
+  const logout = useCallback(async () => {
+    try { await apiLogout(); } catch { /* clear locally regardless */ }
     setUser(null);
     remove('session');
   }, []);
@@ -65,7 +66,8 @@ export function AuthProvider({ children }) {
     return res;
   }, []);
 
-  const signOutAdmin = useCallback(() => {
+  const signOutAdmin = useCallback(async () => {
+    try { await apiLogout(); } catch { /* clear locally regardless */ }
     setAdmin(null);
     remove('admin-session');
   }, []);
