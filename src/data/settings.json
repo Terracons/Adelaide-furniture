@@ -1,0 +1,32 @@
+{
+  "storeName": "Adelaide Furniture",
+  "tagline": "Made in Adelaide. Made to keep.",
+  "description": "Handcrafted furniture from our Adelaide workshop - solid timber frames, natural fabrics, and a ten-year warranty on every joint we cut.",
+  "currency": "AUD",
+  "currencySymbol": "$",
+  "email": "hello@adelaidefurniture.com.au",
+  "phone": "+61 8 8123 4567",
+  "address": "118 Rundle Street, Adelaide SA 5000",
+  "hours": "Mon-Sat 9am-6pm, Sun 10am-4pm",
+  "abn": "42 118 552 907",
+  "freeShippingThreshold": 2000,
+  "flatShipping": 149,
+  "taxRate": 0.1,
+  "taxIncluded": true,
+  "social": {
+    "instagram": "https://instagram.com",
+    "facebook": "https://facebook.com",
+    "pinterest": "https://pinterest.com",
+    "youtube": "https://youtube.com"
+  },
+  "admin": {
+    "email": "admin@adelaidefurniture.com.au",
+    "password": "adelaide2026",
+    "name": "Store Manager"
+  },
+  "announcements": [
+    "Free two-person delivery on orders over $2,000",
+    "10-year frame warranty on every piece",
+    "30-day at-home trial - if it's not right, we collect it"
+  ]
+}

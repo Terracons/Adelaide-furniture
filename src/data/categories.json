@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Sofas & Seating",
+    "slug": "sofas",
+    "description": "Deep, tailored seating built on hardwood frames and wrapped in performance weave.",
+    "image": "/images/categories/sofas.svg",
+    "featured": true,
+    "count": 4
+  },
+  {
+    "id": 2,
+    "name": "Chairs",
+    "slug": "chairs",
+    "description": "Accent, dining and lounge chairs with sculpted silhouettes.",
+    "image": "/images/categories/chairs.svg",
+    "featured": true,
+    "count": 4
+  },
+  {
+    "id": 3,
+    "name": "Tables",
+    "slug": "tables",
+    "description": "Dining, coffee and console tables in solid oak, walnut and travertine.",
+    "image": "/images/categories/tables.svg",
+    "featured": true,
+    "count": 4
+  },
+  {
+    "id": 4,
+    "name": "Beds & Bedroom",
+    "slug": "beds",
+    "description": "Upholstered bed frames, nightstands and dressers for a calm bedroom.",
+    "image": "/images/categories/beds.svg",
+    "featured": true,
+    "count": 3
+  },
+  {
+    "id": 5,
+    "name": "Lighting",
+    "slug": "lighting",
+    "description": "Brass pendants, floor lamps and table lighting with a warm glow.",
+    "image": "/images/categories/lighting.svg",
+    "featured": true,
+    "count": 3
+  },
+  {
+    "id": 6,
+    "name": "Storage",
+    "slug": "storage",
+    "description": "Sideboards, shelving and wardrobes that hide the clutter beautifully.",
+    "image": "/images/categories/storage.svg",
+    "featured": true,
+    "count": 4
+  },
+  {
+    "id": 7,
+    "name": "Decor & Accents",
+    "slug": "decor",
+    "description": "Rugs, mirrors, vases and the finishing details that pull a room together.",
+    "image": "/images/categories/decor.svg",
+    "featured": false,
+    "count": 4
+  },
+  {
+    "id": 8,
+    "name": "Outdoor",
+    "slug": "outdoor",
+    "description": "All-weather lounge and dining pieces for balconies and courtyards.",
+    "image": "/images/categories/outdoor.svg",
+    "featured": false,
+    "count": 2
+  }
+]
