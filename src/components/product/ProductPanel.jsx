@@ -96,7 +96,7 @@ export default function ProductPanel({ product }) {
 
       {product.colors?.length > 0 && (
         <div>
-          <span className="label">Finish - <span className="normal-case text-ink">{colour}</span></span>
+          <span className="label">Finish: <span className="normal-case text-ink">{colour}</span></span>
           <div className="flex flex-wrap gap-2">
             {product.colors.map((c) => (
               <button key={c} onClick={() => setColour(c)}
@@ -128,7 +128,7 @@ export default function ProductPanel({ product }) {
       <div className="flex flex-wrap items-center gap-3">
         <QuantityInput value={qty} onChange={setQty} max={Math.max(1, product.stock)} />
         <button onClick={() => add(product, qty, colour)} disabled={soldOut} className="btn-primary flex-1 min-w-[180px]">
-          <ShoppingBag size={17} /> {soldOut ? 'Sold out' : `Add to cart - ${money(product.price * qty)}`}
+          <ShoppingBag size={17} /> {soldOut ? 'Sold out' : `Add to cart · ${money(product.price * qty)}`}
         </button>
         <button onClick={() => toggle(product)} aria-label="Save to wishlist"
           className={`grid h-12 w-12 place-items-center rounded-full border transition ${

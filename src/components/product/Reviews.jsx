@@ -38,7 +38,7 @@ export default function Reviews({ product, initialReviews = [] }) {
     setOpen(false);
     setForm({ author: '', email: '', rating: 5, title: '', body: '' });
     refresh();
-    toast('Thanks - your review is queued for moderation');
+    toast('Thanks, your review is queued for moderation');
   }
 
   return (

@@ -7,7 +7,10 @@
     "cover": "/images/blog/post-1.svg",
     "author": "Marion Whitlock",
     "role": "Head of Design",
-    "tags": ["Buying guide", "Living room"],
+    "tags": [
+      "Buying guide",
+      "Living room"
+    ],
     "readTime": 7,
     "publishedAt": "2026-06-18",
     "featured": true,
@@ -21,7 +24,10 @@
     "cover": "/images/blog/post-2.svg",
     "author": "Dev Sharma",
     "role": "Interior Stylist",
-    "tags": ["Styling", "Colour"],
+    "tags": [
+      "Styling",
+      "Colour"
+    ],
     "readTime": 5,
     "publishedAt": "2026-06-02",
     "featured": true,
@@ -35,7 +41,10 @@
     "cover": "/images/blog/post-3.svg",
     "author": "Marion Whitlock",
     "role": "Head of Design",
-    "tags": ["Small spaces", "Dining"],
+    "tags": [
+      "Small spaces",
+      "Dining"
+    ],
     "readTime": 6,
     "publishedAt": "2026-05-20",
     "featured": false,
@@ -49,7 +58,10 @@
     "cover": "/images/blog/post-4.svg",
     "author": "Tom Ferrier",
     "role": "Workshop Lead",
-    "tags": ["Care", "Materials"],
+    "tags": [
+      "Care",
+      "Materials"
+    ],
     "readTime": 4,
     "publishedAt": "2026-05-04",
     "featured": false,
@@ -63,11 +75,14 @@
     "cover": "/images/blog/post-5.svg",
     "author": "Tom Ferrier",
     "role": "Workshop Lead",
-    "tags": ["Craft", "Behind the scenes"],
+    "tags": [
+      "Craft",
+      "Behind the scenes"
+    ],
     "readTime": 8,
     "publishedAt": "2026-04-11",
     "featured": true,
-    "body": "<p>People are often surprised by how much of furniture-making is waiting. Timber has to settle. Glue has to cure. Oil has to soak in. The cutting is the fast part.</p><h2>Selecting</h2><p>Boards arrive rough-sawn and go straight into the rack for four weeks to acclimatise to the workshop humidity. Skip this and the joints you cut in winter will open in summer.</p><h2>Milling</h2><p>Each board is faced, thicknessed and squared. We cut components 10mm oversize and let them sit another few days, because releasing internal tension in timber always moves it a little.</p><h2>Joinery</h2><p>Mortise and tenon at every seat rail. It is slower than dowels and dramatically stronger, and it is the reason a chair survives being leaned back on for twenty years.</p><h2>Shaping</h2><p>The back leg is the hardest component in any dining chair - it curves in two planes and carries most of the load. It is cut on a bandsaw against a template, then refined by hand with a spokeshave.</p><h2>Assembly</h2><p>Dry-fit first, always. Then glue-up in one go, clamped and checked for square along both diagonals. Twenty-four hours in the clamps.</p><h2>Sanding</h2><p>120, 180, 240, then a light raise of the grain with water and a final 320. Four passes, all by hand on the curves.</p><h2>Finishing</h2><p>Two coats of hardwax oil with a full day between them, then a week of curing before the chair is allowed near a truck.</p><p>Nine hours of work spread across roughly six weeks. That is what is inside the price.</p>"
+    "body": "<p>People are often surprised by how much of furniture-making is waiting. Timber has to settle. Glue has to cure. Oil has to soak in. The cutting is the fast part.</p><h2>Selecting</h2><p>Boards arrive rough-sawn and go straight into the rack for four weeks to acclimatise to the workshop humidity. Skip this and the joints you cut in winter will open in summer.</p><h2>Milling</h2><p>Each board is faced, thicknessed and squared. We cut components 10mm oversize and let them sit another few days, because releasing internal tension in timber always moves it a little.</p><h2>Joinery</h2><p>Mortise and tenon at every seat rail. It is slower than dowels and dramatically stronger, and it is the reason a chair survives being leaned back on for twenty years.</p><h2>Shaping</h2><p>The back leg is the hardest component in any dining chair, it curves in two planes and carries most of the load. It is cut on a bandsaw against a template, then refined by hand with a spokeshave.</p><h2>Assembly</h2><p>Dry-fit first, always. Then glue-up in one go, clamped and checked for square along both diagonals. Twenty-four hours in the clamps.</p><h2>Sanding</h2><p>120, 180, 240, then a light raise of the grain with water and a final 320. Four passes, all by hand on the curves.</p><h2>Finishing</h2><p>Two coats of hardwax oil with a full day between them, then a week of curing before the chair is allowed near a truck.</p><p>Nine hours of work spread across roughly six weeks. That is what is inside the price.</p>"
   },
   {
     "id": 6,
@@ -77,10 +92,13 @@
     "cover": "/images/blog/post-6.svg",
     "author": "Dev Sharma",
     "role": "Interior Stylist",
-    "tags": ["Lighting", "Styling"],
+    "tags": [
+      "Lighting",
+      "Styling"
+    ],
     "readTime": 5,
     "publishedAt": "2026-03-22",
     "featured": false,
-    "body": "<p>If a room looks good in daylight and flat at night, the problem is almost never the furniture. It is that the room has exactly one light source, mounted in the ceiling, pointing down.</p><h2>Step one: ambient</h2><p>The general wash. A pendant, a ceiling fitting, or wall lights. Put it on a dimmer - this is the single cheapest improvement available to most rooms. Aim for warm white, 2700K. Anything above 3000K starts to feel like an office.</p><h2>Step two: task</h2><p>Light where you actually do something. A floor lamp beside the reading chair, a table lamp on the desk, a pendant over the dining table. Task light should be at or below eye level when seated, so you see the light pooling rather than the bulb.</p><h2>Step three: accent</h2><p>The layer everyone skips. A small lamp on a sideboard, a picture light, something low in a corner. Accent light creates the shadows that give a room depth. Two or three low-level sources beat one bright one every time.</p><h2>The test</h2><p>Turn everything on at night and count the pools of light. Fewer than three in a living room and it will feel like a waiting room. Five and it will feel like somewhere you want to stay.</p>"
+    "body": "<p>If a room looks good in daylight and flat at night, the problem is almost never the furniture. It is that the room has exactly one light source, mounted in the ceiling, pointing down.</p><h2>Step one: ambient</h2><p>The general wash. A pendant, a ceiling fitting, or wall lights. Put it on a dimmer, this is the single cheapest improvement available to most rooms. Aim for warm white, 2700K. Anything above 3000K starts to feel like an office.</p><h2>Step two: task</h2><p>Light where you actually do something. A floor lamp beside the reading chair, a table lamp on the desk, a pendant over the dining table. Task light should be at or below eye level when seated, so you see the light pooling rather than the bulb.</p><h2>Step three: accent</h2><p>The layer everyone skips. A small lamp on a sideboard, a picture light, something low in a corner. Accent light creates the shadows that give a room depth. Two or three low-level sources beat one bright one every time.</p><h2>The test</h2><p>Turn everything on at night and count the pools of light. Fewer than three in a living room and it will feel like a waiting room. Five and it will feel like somewhere you want to stay.</p>"
   }
 ]

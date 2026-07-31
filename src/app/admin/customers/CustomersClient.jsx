@@ -66,7 +66,7 @@ export default function CustomersClient() {
   const total = (customers || []).reduce((s, c) => s + c.totalSpent, 0);
 
   return (
-    <AdminShell title="Customers" subtitle={`${(customers || []).length} accounts - ${money(total, { decimals: false })} lifetime value`}>
+    <AdminShell title="Customers" subtitle={`${(customers || []).length} accounts · ${money(total, { decimals: false })} lifetime value`}>
       <DataTable columns={columns} rows={customers || []} searchKeys={['name', 'email', 'city']} perPage={12}
         empty="No customers yet." />
       <ConfirmDialog open={!!confirm} onClose={() => setConfirm(null)}

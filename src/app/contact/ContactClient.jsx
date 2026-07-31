@@ -30,7 +30,7 @@ export default function ContactClient() {
     setBusy(false);
     setSent(true);
     setForm({ name: '', email: '', phone: '', subject: 'general', body: '' });
-    toast('Message sent - we usually reply within one business day');
+    toast('Message sent, we usually reply within one business day');
   }
 
   return (
@@ -92,7 +92,7 @@ export default function ContactClient() {
 
           {sent && (
             <p className="rounded-xl bg-emerald-50 p-3.5 text-sm text-emerald-800">
-              Thanks - your message is with the team. You will hear back within one business day.
+              Thanks, your message is with the team. You will hear back within one business day.
             </p>
           )}
         </form>

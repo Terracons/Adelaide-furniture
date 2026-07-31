@@ -50,7 +50,7 @@ export default function ConfirmationClient() {
       <div className="mt-8 grid gap-3 sm:grid-cols-3">
         <InfoTile icon={Package} label="Order number" value={order.orderNumber} />
         <InfoTile icon={Truck} label="Estimated delivery" value={formatDate(eta, 'long')} />
-        <InfoTile icon={Mail} label="Payment" value={`${order.paymentMethod} - ${order.paymentStatus}`} />
+        <InfoTile icon={Mail} label="Payment" value={`${order.paymentMethod} · ${order.paymentStatus}`} />
       </div>
 
       <div className="mt-6 overflow-hidden rounded-2xl bg-white shadow-soft">

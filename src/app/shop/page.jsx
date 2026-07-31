@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Shop all furniture',
-  description: 'Browse the full Adelaide Furniture catalogue - sofas, chairs, tables, beds, lighting, storage and decor, all made in our Adelaide workshop.'
+  description: 'Browse the full Adelaide Furniture catalogue: sofas, chairs, tables, beds, lighting, storage and decor, all made in our Adelaide workshop.'
 };
 
 export default async function ShopPage() {

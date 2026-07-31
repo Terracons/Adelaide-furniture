@@ -106,7 +106,7 @@ export default function CheckoutClient() {
     });
 
     clear();
-    toast('Order placed - check your email for confirmation');
+    toast('Order placed, check your email for confirmation');
     router.push(`/order-confirmation/?order=${order.orderNumber}`);
   }
 
@@ -194,7 +194,7 @@ export default function CheckoutClient() {
 
           {step === 2 && (
             <>
-              <Card title="Payment" subtitle="This is a demo store - no real payment is taken">
+              <Card title="Payment" subtitle="This is a demo store, no real payment is taken">
                 <div className="grid gap-2.5 sm:grid-cols-2">
                   {PAYMENTS.map((p) => (
                     <button key={p.id} type="button" onClick={() => set({ paymentMethod: p.id })}
@@ -234,7 +234,7 @@ export default function CheckoutClient() {
                       </Field>
                     </div>
                     <p className="flex items-center gap-1.5 text-[11px] text-ink-400">
-                      <Lock size={12} /> Demo only - card details are never sent anywhere.
+                      <Lock size={12} /> Demo only, card details are never sent anywhere.
                     </p>
                   </div>
                 )}
@@ -273,7 +273,7 @@ export default function CheckoutClient() {
               <button type="button" onClick={next} className="btn-primary">Continue</button>
             ) : (
               <button type="submit" disabled={busy} className="btn-primary">
-                <Lock size={15} /> {busy ? 'Placing order...' : `Place order - ${money(total)}`}
+                <Lock size={15} /> {busy ? 'Placing order...' : `Place order · ${money(total)}`}
               </button>
             )}
           </div>

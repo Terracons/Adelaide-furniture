@@ -5,7 +5,7 @@ import { getFaqs } from '@/lib/data';
 
 export const metadata = {
   title: 'FAQs',
-  description: 'Delivery timeframes, returns, warranty and care - the questions we get asked most.'
+  description: 'Delivery timeframes, returns, warranty and care. The questions we get asked most.'
 };
 
 export default async function FaqPage() {

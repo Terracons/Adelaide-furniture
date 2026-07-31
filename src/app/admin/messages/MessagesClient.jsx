@@ -35,7 +35,7 @@ export default function MessagesClient() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <p className="font-semibold">{m.name}</p>
-                    <p className="text-xs text-ink-400">{m.email}{m.phone ? ` - ${m.phone}` : ''}</p>
+                    <p className="text-xs text-ink-400">{m.email}{m.phone ? ` · ${m.phone}` : ''}</p>
                   </div>
                   <span className="text-xs text-ink-400">{formatDate(m.createdAt)}</span>
                   <div className="flex gap-1">

@@ -50,7 +50,7 @@ export default function CartDrawer() {
             <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
               <div className="grid h-16 w-16 place-items-center rounded-full bg-gold-50 text-gold-500"><ShoppingBag size={24} /></div>
               <p className="font-semibold">Your cart is empty</p>
-              <p className="max-w-[240px] text-sm text-ink-400">Have a look through the collection - everything is made to order in Adelaide.</p>
+              <p className="max-w-[240px] text-sm text-ink-400">Have a look through the collection, everything is made to order in Adelaide.</p>
               <Link href="/shop/" onClick={() => setDrawerOpen(false)} className="btn-primary btn-sm mt-1">Browse the shop</Link>
             </div>
           ) : (

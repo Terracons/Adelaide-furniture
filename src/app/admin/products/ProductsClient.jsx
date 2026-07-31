@@ -104,7 +104,7 @@ export default function ProductsClient() {
         rows={products || []}
         searchKeys={['name', 'sku', 'category']}
         perPage={10}
-        empty="No products yet - add your first one."
+        empty="No products yet. Add your first one."
       />
 
       {editing && (

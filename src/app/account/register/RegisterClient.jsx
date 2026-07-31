@@ -25,7 +25,7 @@ export default function RegisterClient() {
     const res = await register({ name: form.name, email: form.email, password: form.password, phone: form.phone });
     setBusy(false);
     if (!res.ok) return setError(res.message);
-    toast('Account created - welcome to Adelaide Furniture');
+    toast('Account created, welcome to Adelaide Furniture');
     router.push('/account/');
   }
 
@@ -66,7 +66,7 @@ export default function RegisterClient() {
 
           <button type="submit" disabled={busy} className="btn-primary w-full">{busy ? 'Creating...' : 'Create account'}</button>
           <p className="text-center text-[11px] leading-relaxed text-ink-400">
-            This is a demo store. Accounts are stored in your browser only - never enter a real password you use elsewhere.
+            This is a demo store. Accounts are stored in your browser only, never enter a real password you use elsewhere.
           </p>
         </form>
 

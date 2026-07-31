@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Collections',
-  description: 'Browse Adelaide Furniture by room - living, dining, bedroom, lighting, storage, decor and outdoor.'
+  description: 'Browse Adelaide Furniture by room: living, dining, bedroom, lighting, storage, decor and outdoor.'
 };
 
 export default async function CollectionsPage() {
@@ -24,8 +24,8 @@ export default async function CollectionsPage() {
           <Breadcrumbs items={[{ label: 'Collections' }]} />
           <h1 className="mt-3 text-3xl font-semibold md:text-[42px]">Collections</h1>
           <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-ink-500">
-            Every collection is designed to work together - same timbers, same finishes, same
-            proportions - so you can furnish a room over years rather than in one weekend.
+            Every collection is designed to work together, same timbers, same finishes, same
+            proportions, so you can furnish a room over years rather than in one weekend.
           </p>
         </div>
       </section>
