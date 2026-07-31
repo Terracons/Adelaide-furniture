@@ -3,6 +3,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ShopClient from '@/components/shop/ShopClient';
 import { getCategories, getFilterOptions, getProducts } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Shop all furniture',
   description: 'Browse the full Adelaide Furniture catalogue - sofas, chairs, tables, beds, lighting, storage and decor, all made in our Adelaide workshop.'

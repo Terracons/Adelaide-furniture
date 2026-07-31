@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Modal from '@/components/ui/Modal';
 import Img from '@/components/ui/Img';
-import { saveProduct } from '@/lib/data';
+import { saveProduct, uploadImage } from '@/lib/data';
 import { slugify } from '@/lib/format';
 import { useToast } from '@/context/ToastContext';
 
@@ -27,6 +27,22 @@ export default function ProductForm({ product, categories, onClose, onSaved }) {
   }));
 
   const set = (patch) => setForm((f) => ({ ...f, ...patch }));
+
+  async function handleUpload(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setBusy(true);
+    try {
+      const { url } = await uploadImage(file);
+      set({ image: url });
+      toast('Image uploaded');
+    } catch (err) {
+      toast(err.message || 'Upload failed', 'error');
+    } finally {
+      setBusy(false);
+      e.target.value = '';
+    }
+  }
 
   async function submit(e) {
     e.preventDefault();
@@ -117,10 +133,14 @@ export default function ProductForm({ product, categories, onClose, onSaved }) {
           <Field label="Weight"><input className="field" value={form.weight} onChange={(e) => set({ weight: e.target.value })} /></Field>
         </div>
 
-        <Field label="Main image path" hint="A file in /public/images/products, or any full URL">
+        <Field label="Main image" hint="Upload to Vercel Blob, or paste a /public path or full URL">
           <div className="flex gap-3">
             <input className="field" value={form.image} onChange={(e) => set({ image: e.target.value })}
               placeholder="/images/products/my-photo.jpg" />
+            <label className="btn-ghost btn-sm shrink-0 cursor-pointer">
+              Upload
+              <input type="file" accept="image/*" className="hidden" onChange={handleUpload} disabled={busy} />
+            </label>
             <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-cream-dark">
               <Img src={form.image} alt="" className="h-full w-full object-cover" />
             </div>

@@ -8,6 +8,8 @@ import BlogTeaser from '@/components/home/BlogTeaser';
 import InstagramStrip from '@/components/home/InstagramStrip';
 import { getAllProducts, getCategories, getPosts, getTestimonials } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Adelaide Furniture | Handcrafted timber furniture, made to keep'
 };

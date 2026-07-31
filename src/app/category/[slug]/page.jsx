@@ -5,10 +5,7 @@ import ShopClient from '@/components/shop/ShopClient';
 import Img from '@/components/ui/Img';
 import { getCategories, getCategory, getFilterOptions, getProducts } from '@/lib/data';
 
-export async function generateStaticParams() {
-  const categories = await getCategories();
-  return categories.map((c) => ({ slug: c.slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
   const category = await getCategory(params.slug);

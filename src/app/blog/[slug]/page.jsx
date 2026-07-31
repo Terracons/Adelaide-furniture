@@ -6,10 +6,7 @@ import Img from '@/components/ui/Img';
 import { formatDate, initials } from '@/lib/format';
 import { getPost, getPosts } from '@/lib/data';
 
-export async function generateStaticParams() {
-  const posts = await getPosts({ status: 'all' });
-  return posts.map((p) => ({ slug: p.slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
   const post = await getPost(params.slug);

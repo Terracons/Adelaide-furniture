@@ -6,6 +6,8 @@ import ProductCard from '@/components/product/ProductCard';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { getCategories, getProducts } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Collections',
   description: 'Browse Adelaide Furniture by room - living, dining, bedroom, lighting, storage, decor and outdoor.'

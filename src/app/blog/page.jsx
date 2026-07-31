@@ -5,6 +5,8 @@ import Img from '@/components/ui/Img';
 import { formatDate } from '@/lib/format';
 import { getPosts } from '@/lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'The journal',
   description: 'Buying guides, care notes and stories from the Adelaide Furniture workshop.'
