@@ -21,7 +21,14 @@ if (!process.env.DATABASE_URL) {
 // A syntactically valid placeholder lets the module import during build (when
 // DATABASE_URL may be unset) without connecting. Real queries fail loudly at
 // request time if the true URL is missing.
-export const sql = neon(process.env.DATABASE_URL || 'postgresql://user:pass@localhost/placeholder');
+//
+// fetchOptions:{cache:'no-store'} stops Next.js from caching the driver's HTTP
+// calls — without it, parameterless read queries (which Neon sends as GETs) get
+// frozen in Next's Data Cache and serve stale rows.
+export const sql = neon(
+  process.env.DATABASE_URL || 'postgresql://user:pass@localhost/placeholder',
+  { fetchOptions: { cache: 'no-store' } }
+);
 
 /** Collections that may be addressed by name (guards against injection). */
 export const COLLECTIONS = new Set([
