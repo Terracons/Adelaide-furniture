@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Heart, Menu, Search, ShoppingBag, User, X, ChevronDown, Phone } from 'lucide-react';
-import AnnouncementBar from './AnnouncementBar';
 import SearchOverlay from './SearchOverlay';
 import CartDrawer from './CartDrawer';
 import Img from '@/components/ui/Img';
@@ -52,8 +51,6 @@ export default function Header() {
 
   return (
     <>
-      <AnnouncementBar messages={settings?.announcements || []} />
-
       <header className={`sticky top-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-cream/95 shadow-soft backdrop-blur-md' : 'bg-cream'}`}>
         <div className="container flex h-16 items-center justify-between gap-4 md:h-20">
           <button onClick={() => setMenuOpen(true)} aria-label="Open menu" className="-ml-2 p-2 lg:hidden">
