@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Bedroom scene">
+<defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FBF8F2"/><stop offset="100%" stop-color="#EFE4CC"/>
+</linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#C69A3C"/><stop offset="50%" stop-color="#EDDCB4"/><stop offset="100%" stop-color="#C69A3C"/>
+</linearGradient>
+<linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#E4D6BC"/><stop offset="100%" stop-color="#D6C3A2"/>
+</linearGradient>
+<radialGradient id="sun" cx="72%" cy="26%" r="42%">
+  <stop offset="0%" stop-color="#FFF3D6" stop-opacity=".95"/><stop offset="100%" stop-color="#FFF3D6" stop-opacity="0"/>
+</radialGradient>
+<filter id="s2" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#16130f" flood-opacity=".18"/>
+</filter>
+</defs>
+<rect width="1400" height="900" fill="url(#wall)"/><rect width="1400" height="900" fill="url(#sun)"/>
+<circle cx="700" cy="300" r="250" fill="#E7DCC4" fill-opacity=".7"/>
+<rect x="0" y="740" width="1400" height="160" fill="url(#fl)"/>
+<ellipse cx="700" cy="760" rx="400" ry="36" fill="#16130f" fill-opacity=".12"/>
+<g filter="url(#s2)">
+  <rect x="420" y="300" width="560" height="200" rx="46" fill="#BFAE92"/>
+  <rect x="456" y="336" width="488" height="140" rx="30" fill="#D9CBB4" fill-opacity=".7"/>
+  <rect x="360" y="490" width="680" height="140" rx="30" fill="#D9CBB4"/>
+  <rect x="360" y="572" width="680" height="70" rx="26" fill="#FAF7F1" fill-opacity=".8"/>
+  <rect x="440" y="452" width="190" height="76" rx="24" fill="#FAF7F1"/>
+  <rect x="640" y="452" width="190" height="76" rx="24" fill="#FAF7F1" fill-opacity=".85"/>
+  <rect x="392" y="630" width="28" height="106" rx="12" fill="url(#gold)"/>
+  <rect x="980" y="630" width="28" height="106" rx="12" fill="url(#gold)"/>
+  <rect x="360" y="536" width="680" height="10" rx="5" fill="#C69A3C" fill-opacity=".5"/>
+</g>
+<g filter="url(#s2)">
+  <rect x="1090" y="520" width="200" height="220" rx="16" fill="#8A6323"/>
+  <rect x="1112" y="548" width="156" height="72" rx="10" fill="#D9CBB4" fill-opacity=".55"/>
+  <rect x="1112" y="636" width="156" height="72" rx="10" fill="#D9CBB4" fill-opacity=".55"/>
+  <rect x="1162" y="580" width="56" height="9" rx="4" fill="url(#gold)"/>
+  <rect x="1162" y="668" width="56" height="9" rx="4" fill="url(#gold)"/>
+</g>
+<g filter="url(#s2)">
+  <path d="M1130 380 h120 l26 84 h-172 z" fill="url(#gold)"/>
+  <rect x="1183" y="464" width="14" height="56" rx="7" fill="#7A5626"/>
+</g>
+<g transform="translate(180,740) scale(0.95)" filter="url(#s2)">
+  <path d="M0 0 q-6 -110 -74 -160" stroke="#33413A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M0 0 q10 -130 78 -168" stroke="#33413A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M0 0 q2 -150 -8 -196" stroke="#33413A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M-104 -180 q30 -26 60 6 q-30 26 -60 -6 z" fill="#33413A"/>
+  <path d="M48 -196 q30 -20 62 12 q-32 22 -62 -12 z" fill="#33413A"/>
+  <ellipse cx="-8" cy="-202" rx="30" ry="18" fill="#33413A" fill-opacity=".85"/>
+  <path d="M-46 0 h92 l-14 96 h-64 z" fill="#C69A3C"/>
+  <path d="M-46 0 h92 l-3 22 h-86 z" fill="#ffffff" fill-opacity=".25"/>
+</g>
+<rect x="120" y="150" width="180" height="240" rx="90" fill="url(#gold)"/>
+<rect x="138" y="168" width="144" height="204" rx="72" fill="#FBF8F2"/>
+</svg>

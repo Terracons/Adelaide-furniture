@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Article cover">
+<defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FBF8F2"/><stop offset="100%" stop-color="#EFE4CC"/>
+</linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#AC7F2C"/><stop offset="50%" stop-color="#EDDCB4"/><stop offset="100%" stop-color="#AC7F2C"/>
+</linearGradient>
+<linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#E4D6BC"/><stop offset="100%" stop-color="#D6C3A2"/>
+</linearGradient>
+<radialGradient id="sun" cx="72%" cy="26%" r="42%">
+  <stop offset="0%" stop-color="#FFF3D6" stop-opacity=".95"/><stop offset="100%" stop-color="#FFF3D6" stop-opacity="0"/>
+</radialGradient>
+<filter id="s2" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#16130f" flood-opacity=".18"/>
+</filter>
+</defs>
+<rect width="1200" height="800" fill="#FBF8F2"/>
+<circle cx="720" cy="260" r="290" fill="#F0E3C8"/>
+<circle cx="690" cy="520" r="130" fill="#AC7F2C" fill-opacity=".28"/>
+<rect x="0" y="640" width="1200" height="160" fill="#C6B79C" fill-opacity=".35"/>
+<g filter="url(#s2)" opacity=".95">
+  <rect x="340" y="380" width="420" height="120" rx="34" fill="#E3D8C4"/>
+  <rect x="340" y="320" width="420" height="90" rx="38" fill="#C6B79C"/>
+  <rect x="352" y="500" width="22" height="70" rx="10" fill="url(#gold)"/>
+  <rect x="726" y="500" width="22" height="70" rx="10" fill="url(#gold)"/>
+</g>
+<path d="M0 0 h1200 v10 h-1200 z" fill="#AC7F2C"/>
+<rect width="1200" height="800" fill="url(#sun)" fill-opacity=".35"/>
+</svg>

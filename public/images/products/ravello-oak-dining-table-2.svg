@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Adelaide Furniture product illustration"><defs>
+<linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FBF8F2"/><stop offset="100%" stop-color="#F0E3C8" stop-opacity=".55"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="42%" r="55%">
+  <stop offset="0%" stop-color="#ffffff" stop-opacity=".85"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#AC7F2C"/><stop offset="55%" stop-color="#EDDCB4"/><stop offset="100%" stop-color="#AC7F2C"/>
+</linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#16130f" flood-opacity=".16"/>
+</filter>
+</defs>
+<rect width="800" height="800" fill="url(#bgg)"/><rect width="800" height="800" fill="url(#glow)"/><ellipse cx="400" cy="662" rx="270" ry="26" fill="#16130f" fill-opacity=".10"/>
+<g filter="url(#sh)">
+  <rect x="140" y="330" width="520" height="46" rx="18" fill="#94703A"/>
+  <rect x="140" y="330" width="520" height="16" rx="8" fill="#ffffff" fill-opacity=".22"/>
+  <rect x="196" y="376" width="26" height="250" rx="10" fill="url(#goldg)"/>
+  <rect x="578" y="376" width="26" height="250" rx="10" fill="url(#goldg)"/>
+  <rect x="196" y="600" width="120" height="18" rx="9" fill="#AC7F2C"/>
+  <rect x="484" y="600" width="120" height="18" rx="9" fill="#AC7F2C"/>
+  <rect x="210" y="470" width="380" height="14" rx="7" fill="#AC7F2C" fill-opacity=".65"/>
+  <ellipse cx="400" cy="318" rx="52" ry="14" fill="#C6B79C"/>
+  <path d="M382 318 q18 -70 36 0 z" fill="#E3D8C4"/>
+</g></svg>

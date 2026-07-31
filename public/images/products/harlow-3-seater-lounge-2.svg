@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Adelaide Furniture product illustration"><defs>
+<linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#F7F4EF"/><stop offset="100%" stop-color="#E7DCC4" stop-opacity=".55"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="42%" r="55%">
+  <stop offset="0%" stop-color="#ffffff" stop-opacity=".85"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#D3AF5A"/><stop offset="55%" stop-color="#EDDCB4"/><stop offset="100%" stop-color="#D3AF5A"/>
+</linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#16130f" flood-opacity=".16"/>
+</filter>
+</defs>
+<rect width="800" height="800" fill="url(#bgg)"/><rect width="800" height="800" fill="url(#glow)"/><ellipse cx="400" cy="652" rx="260" ry="26" fill="#16130f" fill-opacity=".10"/>
+<g filter="url(#sh)">
+  <rect x="150" y="360" width="500" height="150" rx="34" fill="#3E4A43"/>
+  <rect x="150" y="300" width="500" height="110" rx="40" fill="#2E382F"/>
+  <rect x="150" y="318" width="120" height="200" rx="38" fill="#3E4A43"/>
+  <rect x="530" y="318" width="120" height="200" rx="38" fill="#3E4A43"/>
+  <rect x="280" y="330" width="115" height="82" rx="18" fill="#F7F4EF" fill-opacity=".85"/>
+  <rect x="405" y="330" width="115" height="82" rx="18" fill="#F7F4EF" fill-opacity=".85"/>
+  <rect x="185" y="430" width="200" height="66" rx="20" fill="#F7F4EF" fill-opacity=".55"/>
+  <rect x="415" y="430" width="200" height="66" rx="20" fill="#F7F4EF" fill-opacity=".55"/>
+  <rect x="190" y="505" width="26" height="60" rx="10" fill="url(#goldg)"/>
+  <rect x="584" y="505" width="26" height="60" rx="10" fill="url(#goldg)"/>
+  <rect x="330" y="505" width="22" height="52" rx="9" fill="#7A5626"/>
+  <rect x="448" y="505" width="22" height="52" rx="9" fill="#7A5626"/>
+</g></svg>
