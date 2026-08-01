@@ -69,8 +69,6 @@ export default function LoginClient() {
 
         <div className="mt-4 rounded-xl border border-dashed border-gold-300 bg-gold-50/60 p-4 text-xs leading-relaxed text-gold-900">
           <strong>Demo account:</strong> priya.nandan@example.com / demo1234
-          <br />
-          <strong>Admin panel:</strong> <Link href="/admin/login/" className="underline">/admin</Link> · admin@adelaidefurniture.com.au / adelaide2026
         </div>
       </div>
     </div>
