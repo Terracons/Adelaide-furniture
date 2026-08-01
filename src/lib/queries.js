@@ -187,11 +187,12 @@ export async function listReviews({ productId, status = 'approved', limit } = {}
 }
 
 export async function addReview(input) {
+  const { id, status, createdAt, ...rest } = input; // client can't set these
   return insertRow('reviews', {
-    status: 'pending',
-    createdAt: new Date().toISOString().slice(0, 10),
-    ...input,
-    rating: Number(input.rating) || 5
+    ...rest,
+    rating: Number(rest.rating) || 5,
+    status: 'pending', // always queued for moderation
+    createdAt: new Date().toISOString().slice(0, 10)
   });
 }
 
@@ -289,12 +290,15 @@ export async function getOrder(idOrNumber) {
 
 /** Multi-table write: create order, decrement stock, count coupon redemption. */
 export async function createOrder(payload) {
+  // Strip fields the client must not control: order state and identifiers are
+  // set by the server, never trusted from the request body.
+  const { id, status, paymentStatus, orderNumber, createdAt, ...rest } = payload;
   const order = await insertRow('orders', {
+    ...rest,
+    country: rest.country || 'Australia',
     createdAt: new Date().toISOString().slice(0, 10),
     status: 'pending',
-    paymentStatus: payload.paymentMethod === 'Bank transfer' ? 'pending' : 'paid',
-    country: 'Australia',
-    ...payload
+    paymentStatus: rest.paymentMethod === 'Bank transfer' ? 'pending' : 'paid'
   });
   // orderNumber derives from the assigned id.
   order.orderNumber = 'ADL-' + String(30000 + order.id * 13);
@@ -373,16 +377,26 @@ export async function updateProfile(id, patch) {
 
 /* ------------------------------------------------------------------ auth  */
 
-export async function registerCustomer({ name, email, password, ...rest }) {
+export async function registerCustomer(input) {
+  // Never let the request set role/status/id/passwordHash — privilege injection.
+  const { name, email, password, role, status, id, passwordHash: _ph, ...rest } = input || {};
+
+  if (!name || !email || !password)
+    return { ok: false, message: 'Name, email and password are required.' };
+  if (String(password).length < 8)
+    return { ok: false, message: 'Password must be at least 8 characters.' };
+
   const rows = await collection('customers');
   if (rows.some((c) => (c.email || '').toLowerCase() === String(email).toLowerCase()))
     return { ok: false, message: 'An account with that email already exists.' };
 
   const saved = await insertRow('customers', {
+    ...rest,
     name, email,
     passwordHash: await hashPassword(password),
-    role: 'customer', status: 'active', country: 'Australia',
-    createdAt: new Date().toISOString().slice(0, 10), ...rest
+    role: 'customer', status: 'active',
+    country: rest.country || 'Australia',
+    createdAt: new Date().toISOString().slice(0, 10)
   });
   const { passwordHash, ...user } = saved;
   return { ok: true, user };
@@ -412,7 +426,8 @@ export async function adminLogin(email, password) {
 /* -------------------------------------------------------------- messages  */
 
 export async function sendMessage(input) {
-  return insertRow('messages', { isRead: false, createdAt: new Date().toISOString(), ...input });
+  const { id, isRead, createdAt, ...rest } = input || {};
+  return insertRow('messages', { ...rest, isRead: false, createdAt: new Date().toISOString() });
 }
 
 export const listMessages = () => collection('messages');
